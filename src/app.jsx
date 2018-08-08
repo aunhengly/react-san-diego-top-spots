@@ -21,27 +21,25 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <div id="tobefixed">
+        <div id='tobefixed'>
           <header>
-            <h1>San Diego Top Sports</h1>
+            <h1>San Diego Top Spots</h1>
             <p>A list of the top 30 places to see in San Diego, California.</p>
           </header>
         </div>
 
-        <div id="top-spots-container">
+        <div id='top-spots-container'>
           {/* <pre>{ JSON.stringify(this.state.topspots, null, 2) }</pre> */}
-          {
-            this.state.topspots.map(topspot => (
-              <TopSpot
-                key={topspot.id}
-                name={topspot.name}
-                description={topspot.description}
-                location={topspot.location} />
-            ))
-          }
+          {this.state.topspots.map(topspot => (
+            <TopSpot
+              key={ topspot.id }
+              name={ topspot.name }
+              description={ topspot.description }
+              location={ topspot.location }
+            />
+          ))}
         </div>
       </div>
-
     );
   }
 }
